@@ -1,6 +1,6 @@
-# Quickfill 🚀
+# Quickfill MCP Server
 
-**Quickfill** is a Quickfill MCP Server that allows AI models to "bring conversation to life" by instantly rendering interactive, hot-reloading, lightweight frontends. 
+**Quickfill** is an MCP Server that allows AI models to "bring conversation to life" by instantly rendering interactive, hot-reloading, lightweight frontends. 
 
 It is designed to bridge the gap between static AI text responses and functional user experiences. Instead of just seeing code, the user **feels** the conversation through a live browser interface.
 
