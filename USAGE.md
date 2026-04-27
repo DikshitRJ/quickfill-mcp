@@ -61,8 +61,3 @@ If you use extensions like *Cline* or *Roo Code*:
 2. Add a new server:
    - **Command**: `npx`
    - **Args**: `["-y", "@dikshitrj/quickfill-mcp@latest"]`
-
----
-
-## 🌍 Claude Web (via Claude.ai)
-*Note: As of now, Claude.ai (the website) does not natively support local MCP servers. You must use the **Claude Desktop** app to use Quickfill.*

@@ -61,7 +61,7 @@ jobs:
 
       - name: Create package tarball
         run: |
-          ORIGINAL_NAME=$(npm pack)
+          ORIGINAL_NAME=$(npm pack --silent)
           FINAL_NAME="quickfill-mcp-v${{ env.VERSION }}.tar.gz"
           mv "$ORIGINAL_NAME" "$FINAL_NAME"
           echo "ARTIFACT_NAME=$FINAL_NAME" >> $GITHUB_ENV
