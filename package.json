@@ -1,6 +1,6 @@
 {
   "name": "@dikshitrj/quickfill-mcp",
-  "version": "1.0.15",
+  "version": "1.2.5",
   "description": "Quickfill MCP Server: Hot-reloading Alpine.js environment for local file parsing.",
   "author": "DikshitRJ",
   "license": "MIT",
