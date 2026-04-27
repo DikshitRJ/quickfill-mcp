@@ -18,7 +18,11 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "gemini-extension.json",
+    "agents",
+    "CLAUDE.md",
+    "USAGE.md"
   ],
   "scripts": {
     "build": "node build.js",

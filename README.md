@@ -12,7 +12,7 @@
 **Transform static AI conversations into vibrant, interactive experiences.**  
 Quickfill is a lightweight **Generative UI Toolkit** delivered via the Model Context Protocol (MCP).
 
-[Explore the Docs](#-table-of-contents) • [Quick Start](#-usage) • [GitHub](https://github.com/DikshitRJ/quickfill-mcp)
+[🚀 Quick Start Guide](USAGE.md) • [🤖 Agent Guidelines](AGENTS.md) • [🤝 Contributing](CONTRIBUTING.md) • [GitHub](https://github.com/DikshitRJ/quickfill-mcp)
 
 </div>
 
@@ -23,7 +23,6 @@ Quickfill is a lightweight **Generative UI Toolkit** delivered via the Model Con
 - [✨ The "Generative UI" Workflow](#-the-generative-ui-workflow)
 - [🎨 Core Features](#-core-features)
 - [🛠 Tool Reference](#-tool-reference)
-- [🚀 Usage & Configuration](#-usage--configuration)
 - [📈 Star History](#-star-history)
 - [🏗 Development](#-development)
 - [📜 License](#-license)
@@ -80,32 +79,6 @@ Securely exposes a local file to the web server's root. Essential for letting th
 
 ---
 
-## 🚀 Usage & Configuration
-
-### Quick Run
-```bash
-npx -y @dikshitrj/quickfill-mcp@latest
-```
-
-### 🖥 Claude Desktop Integration
-Add this to your `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "quickfill": {
-      "command": "npx",
-      "args": [
-        "-y", 
-        "@dikshitrj/quickfill-mcp@latest"
-      ]
-    }
-  }
-}
-```
-
----
-
 ## 📈 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=DikshitRJ/quickfill-mcp&type=Date)](https://star-history.com/#DikshitRJ/quickfill-mcp&Date)
@@ -134,3 +107,4 @@ npm test
 ## 📜 License
 Built with ❤️ by [DikshitRJ](https://github.com/DikshitRJ).  
 This project is licensed under the [MIT License](LICENSE).
+

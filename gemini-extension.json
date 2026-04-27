@@ -1,0 +1,12 @@
+{
+  "name": "quickfill",
+  "version": "1.0.15",
+  "description": "Generative UI Toolkit for AI Agents via MCP",
+  "mcpServers": {
+    "quickfill": {
+      "command": "node",
+      "args": ["${extensionPath}/dist/index.js"],
+      "cwd": "${extensionPath}"
+    }
+  }
+}
