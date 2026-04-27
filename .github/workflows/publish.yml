@@ -44,6 +44,12 @@ jobs:
         run: |
           # Extracts version from refs/tags/v1.2.3 -> 1.2.3
           VERSION=${GITHUB_REF#refs/tags/v}
+          
+          # If version is only X.Y, append .0 to satisfy npm's strict SemVer requirement
+          if [[ $VERSION =~ ^[0-9]+\.[0-9]+$ ]]; then
+            VERSION="${VERSION}.0"
+          fi
+          
           echo "Syncing package.json to version $VERSION"
           npm version $VERSION --no-git-tag-version --allow-same-version
 
