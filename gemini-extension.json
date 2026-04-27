@@ -3,7 +3,7 @@
   "version": "1.3.0",
   "description": "Generative UI Toolkit for AI Agents via MCP",
   "mcpServers": {
-    "quickfill": {
+    "quickfill-mcp": {
       "command": "node",
       "args": ["${extensionPath}/dist/index.js"],
       "cwd": "${extensionPath}"
