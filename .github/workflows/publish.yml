@@ -61,7 +61,10 @@ jobs:
 
       - name: Create package tarball
         run: |
-          ORIGINAL_NAME=$(npm pack --silent)
+          # Use --json to get structured data and jq to extract the filename safely
+          JSON_OUTPUT=$(npm pack --json)
+          ORIGINAL_NAME=$(echo "$JSON_OUTPUT" | jq -r '.[0].filename')
+          
           FINAL_NAME="quickfill-mcp-v${{ env.VERSION }}.tar.gz"
           mv "$ORIGINAL_NAME" "$FINAL_NAME"
           echo "ARTIFACT_NAME=$FINAL_NAME" >> $GITHUB_ENV
