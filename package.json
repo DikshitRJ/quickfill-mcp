@@ -3,13 +3,18 @@
   "version": "1.3.0",
   "description": "Quickfill MCP Server: Hot-reloading Alpine.js environment for local file parsing.",
   "author": "DikshitRJ",
+  "contributors": [
+    {"name": "Adarsh Gourab Mahalik", "email": "e2vylu0d0@mozmail.com", "url": "https://github.com/itsmeadarsh2008/"}
+  ],
   "license": "MIT",
   "keywords": [
     "mcp",
     "mcp-server",
     "modelcontextprotocol",
     "alpinejs",
-    "interactive"
+    "interactive",
+    "claude",
+    "generative-ui"
   ],
   "type": "module",
   "main": "dist/index.js",
