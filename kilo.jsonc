@@ -1,0 +1,10 @@
+{
+  "$schema": "https://app.kilo.ai/config.json",
+  "mcp": {
+    "quickfill": {
+      "type": "local",
+      "enabled": true,
+      "command": ["bun", "dist/index.js"]
+    }
+  }
+}

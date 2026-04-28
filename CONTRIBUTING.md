@@ -1,8 +1,8 @@
-# 🤝 Contributing to Quickfill
+# Contributing to Quickfill
 
 Thank you for your interest in improving Quickfill! We welcome contributions from the community.
 
-## 🛠 Development Setup
+## Development Setup
 
 1. **Clone the repo**:
    ```bash
@@ -25,17 +25,17 @@ Thank you for your interest in improving Quickfill! We welcome contributions fro
    npm test
    ```
 
-## 🧹 Standards
+## Standards
 
 - **Formatting**: We use [Biome](https://biomejs.dev/). Run `npm run check` before submitting a PR.
 - **Commits**: Please use descriptive commit messages.
 - **Tests**: If you add a new feature, please add a corresponding test in `test/integration.test.ts`.
 
-## 🚀 Workflow
+## Workflow
 1. Fork the repository.
 2. Create a new branch for your feature or bugfix.
 3. Make your changes and ensure tests pass.
 4. Submit a Pull Request with a clear description of the changes.
 
-## 📜 Code of Conduct
+## Code of Conduct
 Please be respectful and professional in all interactions within this project.

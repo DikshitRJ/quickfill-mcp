@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "quickfill": {
+      "command": "bash",
+      "args": [".vscode/start-mcp.sh"]
+    }
+  }
+}

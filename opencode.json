@@ -1,0 +1,10 @@
+{
+  "mcp": {
+    "quickfill": {
+      "type": "local",
+      "enabled":true,
+      "command": "bun",
+      "args": ["dist/index.js"]
+    }
+  }
+}

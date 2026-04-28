@@ -1,54 +1,46 @@
-# ⚡ Quickfill: The Generative UI Toolkit for AI Agents
+<img src="./banner.svg" >
 
-<div align="center">
-
-[![NPM](https://nodei.co/npm/@dikshitrj/quickfill-mcp.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/@dikshitrj/quickfill-mcp)
-
-[![license](https://img.shields.io/github/license/DikshitRJ/quickfill-mcp?style=for-the-badge)](LICENSE)
-[![stars](https://img.shields.io/github/stars/DikshitRJ/quickfill-mcp?style=for-the-badge&logo=github)](https://github.com/DikshitRJ/quickfill-mcp/stargazers)
-[![workflow](https://img.shields.io/github/actions/workflow/status/DikshitRJ/quickfill-mcp/ci.yml?style=for-the-badge&logo=github-actions)](https://github.com/DikshitRJ/quickfill-mcp/actions)
-
-**Transform static AI conversations into vibrant, interactive experiences.**  
+**Transform static AI conversations into vibrant, interactive experiences.**
 Quickfill is a lightweight **Generative UI Toolkit** delivered via the Model Context Protocol (MCP).
 
-[🚀 Quick Start Guide](USAGE.md) • [🤝 Contributing](CONTRIBUTING.md) • [GitHub](https://github.com/DikshitRJ/quickfill-mcp)
-
-</div>
+[Quick Start Guide](USAGE.md) • [Contributing](CONTRIBUTING.md) • [GitHub](https://github.com/DikshitRJ/quickfill-mcp)
 
 ---
 
-## 📖 Table of Contents
-- [🌟 Overview](#-overview)
-- [✨ The "Generative UI" Workflow](#-the-generative-ui-workflow)
-- [🎨 Core Features](#-core-features)
-- [🛠 Tool Reference](#-tool-reference)
-- [📈 Star History](#-star-history)
-- [🏗 Development](#-development)
-- [📜 License](#-license)
+## Table of Contents
+- [Overview](#overview)
+- [The "Generative UI" Workflow](#the-generative-ui-workflow)
+- [Core Features](#core-features)
+- [Tool Reference](#tool-reference)
+- [Star History](#star-history)
+- [Development](#development)
+- [License](#license)
 
 ---
 
-## 🌟 Overview
+## Overview
+<img src="./output.gif" width="100%" height="100%">
+
 **Quickfill** bridges the gap between AI reasoning and functional user interfaces. Instead of the AI simply describing a dashboard or a tool, it **builds and launches it** instantly in your browser. No project setup, no `npm install`, no boilerplate—just pure generative UI.
 
 It uses a high-performance stack powered by **Hono**, **Alpine.js**, and **Tailwind CSS** to render lightweight, hot-reloading frontends directly from your conversation.
 
 ---
 
-## ✨ The "Generative UI" Workflow
+## The "Generative UI" Workflow
 The power of Quickfill lies in its ability to bridge local data with interactive frontends:
 
-1.  📊 **Analyze**: Feed an Excel sheet, PDF, or image to your AI agent.
-2.  🎨 **Generate**: The AI drafts a custom-tailored UI using Tailwind & Alpine.js.
-3.  🔗 **Bridge**: Use `mount_file` to expose your local data to the secure web environment.
-4.  🚀 **Launch**: Use `render_interactive_ui` to pop open a live, functional dashboard in your browser.
+1.  **Analyze**: Feed an Excel sheet, PDF, or image to your AI agent.
+2.  **Generate**: The AI drafts a custom-tailored UI using Tailwind & Alpine.js.
+3.  **Bridge**: Use `mount_file` to expose your local data to the secure web environment.
+4.  **Launch**: Use `render_interactive_ui` to pop open a live, functional dashboard in your browser.
 
 ---
 
-## 🎨 Core Features
-- ⚡ **Instant Rendering**: Zero-config browser UI updates with hot-reload.
-- 📁 **Local Bridging**: `mount_file` creates secure symlinks to bypass browser file restrictions.
-- 🛠 **Native Graphics Stack**:
+## Core Features
+- **Instant Rendering**: Zero-config browser UI updates with hot-reload.
+- **Local Bridging**: `mount_file` creates secure symlinks to bypass browser file restrictions.
+- **Native Graphics Stack**:
     - **Tailwind CSS**: Utility-first styling for modern designs.
     - **Alpine.js**: Lightweight reactivity for complex interactions.
     - **WASM Parsers**: Built-in support for `PDF.js`, `SheetJS`, and `Tesseract.js` (OCR).
@@ -56,9 +48,9 @@ The power of Quickfill lies in its ability to bridge local data with interactive
 
 ---
 
-## 🛠 Tool Reference
+## Tool Reference
 
-### 🖼 `render_interactive_ui`
+### `render_interactive_ui`
 The primary engine for Generative UI. It creates or updates the interactive browser view.
 
 | Parameter | Type | Description |
@@ -67,7 +59,7 @@ The primary engine for Generative UI. It creates or updates the interactive brow
 | `required_libs` | `string[]` | Optional. Choose from `["excel", "pdf", "ocr"]` to inject heavy libraries. |
 | `open_in_browser` | `boolean` | Whether to automatically open the tab. Defaults to `true` on first call. |
 
-### 🖇 `mount_file`
+### `mount_file`
 Securely exposes a local file to the web server's root. Essential for letting the browser "see" your local data.
 
 | Parameter | Type | Description |
@@ -78,13 +70,13 @@ Securely exposes a local file to the web server's root. Essential for letting th
 
 ---
 
-## 📈 Star History
+## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=DikshitRJ/quickfill-mcp&type=Date)](https://star-history.com/#DikshitRJ/quickfill-mcp&Date)
 
 ---
 
-## 🏗 Development
+## Development
 The project is built with **Node.js** and optimized with **Biome**.
 
 ```bash
@@ -100,11 +92,11 @@ npm run check
 # Run tests
 npm test
 ```
-Check out [CONTRIBUTNG.md](CONTRIBUTING.md) for contributing to this repository.
+Check out [CONTRIBUTING.md](CONTRIBUTING.md) for contributing to this repository.
 
 ---
 
-## 📜 License
-Built with ❤️ by [DikshitRJ](https://github.com/DikshitRJ).  
+## License
+Built with love by [DikshitRJ](https://github.com/DikshitRJ).
 This project is licensed under the [MIT License](LICENSE).
 

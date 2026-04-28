@@ -91,7 +91,7 @@ describe('MCP Server Integration', () => {
   async function sendRequest(request: any): Promise<any> {
     return new Promise((resolve, reject) => {
       let responseData = '';
-      
+
       const onData = (data: Buffer) => {
         responseData += data.toString();
         try {

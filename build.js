@@ -3,7 +3,7 @@ import fs from 'fs';
 
 async function build() {
   console.log('Building bundle...');
-  
+
   try {
     // Bundle everything into a single file
     await esbuild.build({
@@ -28,7 +28,7 @@ const require = createRequire(import.meta.url);
 
     // Set executable permissions
     fs.chmodSync('dist/index.js', '755');
-    
+
     console.log('Build complete: dist/index.js');
   } catch (err) {
     console.error('Build failed:', err);

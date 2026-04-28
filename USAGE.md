@@ -1,8 +1,8 @@
-# 🚀 Using Quickfill with AI Agents
+# Using Quickfill with AI Agents
 
 Quickfill is compatible with any AI agent that supports the **Model Context Protocol (MCP)**. Below are setup guides for the most popular platforms.
 
-## 🖥 Claude Desktop
+## Claude Desktop
 The gold standard for MCP.
 1. Open your `claude_desktop_config.json`:
    - **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
@@ -22,7 +22,7 @@ The gold standard for MCP.
 
 ---
 
-## 🤖 Claude Code (CLI)
+## Claude Code (CLI)
 For developers using Anthropic's CLI agent.
 1. Run the following command in your terminal to add Quickfill as a persistent tool:
 ```bash
@@ -32,7 +32,7 @@ mcp add quickfill npx -y @dikshitrj/quickfill-mcp@latest
 
 ---
 
-## ⚡ Cursor
+## Cursor
 The AI-powered IDE.
 1. Go to **Settings** > **Cursor Settings** > **Features** > **MCP**.
 2. Click **+ Add New MCP Server**.
@@ -42,7 +42,7 @@ The AI-powered IDE.
 
 ---
 
-## 🛠 Gemini CLI
+## Gemini CLI
 The specialized terminal agent for Google's Gemini.
 1. Install as a global extension:
 ```bash
@@ -55,7 +55,7 @@ gemini invoke quickfill-mcp "Show me a dashboard of my recent analytics"
 
 ---
 
-## 💻 VS Code (via MCP Extensions)
+## VS Code (via MCP Extensions)
 If you use extensions like *Cline* or *Roo Code*:
 1. Open the extension's MCP configuration settings.
 2. Add a new server:
