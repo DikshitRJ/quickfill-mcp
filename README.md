@@ -1,4 +1,12 @@
-# ⚡ Quickfill: The Generative UI Toolkit for AI Agents
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/b3aad172-76b8-4b42-8b28-54b20e9c0d60" 
+       alt="Banner Image" 
+       width="100%" 
+       style="border-radius: 15px; display: block;"> <img>
+</div>
+<br/>
+
+---
 
 <div align="center">
 
@@ -8,8 +16,6 @@
 [![stars](https://img.shields.io/github/stars/DikshitRJ/quickfill-mcp?style=for-the-badge&logo=github)](https://github.com/DikshitRJ/quickfill-mcp/stargazers)
 [![workflow](https://img.shields.io/github/actions/workflow/status/DikshitRJ/quickfill-mcp/ci.yml?style=for-the-badge&logo=github-actions)](https://github.com/DikshitRJ/quickfill-mcp/actions)
 
-**Transform static AI conversations into vibrant, interactive experiences.**  
-Quickfill is a lightweight **Generative UI Toolkit** delivered via the Model Context Protocol (MCP).
 
 [🚀 Quick Start Guide](USAGE.md) • [🤝 Contributing](CONTRIBUTING.md) • [GitHub](https://github.com/DikshitRJ/quickfill-mcp)
 
