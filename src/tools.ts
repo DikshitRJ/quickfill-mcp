@@ -9,7 +9,7 @@ import { fsManager } from "./filesystem.js";
 import { quickfillServer } from "./server.js";
 
 let isFirstRun = true;
-let streamingContent = "";
+let _streamingContent = "";
 
 export async function handleRenderUi(
 	htmlBody: string,
@@ -21,7 +21,7 @@ export async function handleRenderUi(
 		process.env.VSCODE_PID || process.env.TERM_PROGRAM === "vscode";
 
 	if (streaming) {
-		streamingContent = htmlBody;
+		_streamingContent = htmlBody;
 		if (isInVSCode) {
 			quickfillServer.broadcastHtmlUpdate(htmlBody);
 		}
@@ -99,10 +99,24 @@ export function handleMountFile(absolutePath: string) {
 	}
 }
 
+interface ChartData {
+	labels?: string[];
+	datasets?: unknown[];
+	[key: string]: unknown;
+}
+
+interface ChartOptions {
+	responsive?: boolean;
+	maintainAspectRatio?: boolean;
+	plugins?: unknown;
+	scales?: unknown;
+	[key: string]: unknown;
+}
+
 export async function handleRenderChart(
-	data: any,
+	data: ChartData,
 	type: string,
-	options: any = {},
+	options: ChartOptions = {},
 	openInBrowser?: boolean,
 ) {
 	const chartHtml = `
@@ -130,7 +144,7 @@ export async function handleRenderChart(
 }
 
 export async function handleRenderTable(
-	data: any[],
+	data: Record<string, unknown>[],
 	columns?: string[],
 	openInBrowser?: boolean,
 ) {
@@ -171,7 +185,7 @@ export async function handleRenderTable(
 }
 
 export async function handleRenderForm(
-	fields: any[],
+	fields: Array<{ name: string; label?: string; type?: string; required?: boolean; options?: string[] }>,
 	onSubmit?: string,
 	openInBrowser?: boolean,
 ) {
@@ -180,7 +194,7 @@ export async function handleRenderForm(
 			<form x-data="{ formData: {} }" @submit.prevent="${onSubmit || "console.log(formData)"}">
 				${fields
 					.map(
-						(field: any) => `
+						(field) => `
 					<div class="mb-4">
 						<label class="block text-sm font-medium mb-1">${field.label || field.name}</label>
 						${
@@ -290,8 +304,20 @@ ${diagramCode}\`);
 	return await handleRenderUi(mermaidHtml, ["mermaid"], openInBrowser);
 }
 
+interface DashboardWidgetData {
+	label?: string;
+	value?: string;
+	[key: string]: unknown;
+}
+
+interface DashboardWidget {
+	type: string;
+	data: DashboardWidgetData;
+	options?: Record<string, unknown>;
+}
+
 export async function handleRenderDashboard(
-	widgets: Array<{ type: string; data: any; options?: any }>,
+	widgets: DashboardWidget[],
 	openInBrowser?: boolean,
 ) {
 	let dashboardHtml = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">`;

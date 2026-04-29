@@ -1,9 +1,11 @@
 import type { Server } from "node:http";
 import { type ServerType, serve } from "@hono/node-server";
 import { serveStatic } from "@hono/node-server/serve-static";
+import type { Context, Next } from "hono";
 import getPort from "get-port";
 import { Hono } from "hono";
 import { WebSocket, WebSocketServer } from "ws";
+import type { IncomingMessage } from "node:http";
 import { fsManager } from "./filesystem.js";
 
 export class QuickfillServer {
@@ -15,7 +17,7 @@ export class QuickfillServer {
 	private shellClients: Set<WebSocket> = new Set();
 
 	constructor() {
-		this.app.use("/*", async (c: any, next: any) => {
+		this.app.use("/*", async (c: Context, next: Next) => {
 			await next();
 			c.header(
 				"Cache-Control",
@@ -25,7 +27,7 @@ export class QuickfillServer {
 			c.header("Expires", "0");
 		});
 
-		this.app.get("/shell", async (c: any) => {
+		this.app.get("/shell", async (c: Context) => {
 			const { getShellHtml } = await import("./constants.js");
 			return c.html(getShellHtml(this.port));
 		});
@@ -48,7 +50,7 @@ export class QuickfillServer {
 					fetch: this.app.fetch,
 					port: this.port,
 				},
-				(info: any) => {
+				(info: { port: number }) => {
 					process.stderr.write(
 						`[Server] Web server running at http://localhost:${info.port}\n`,
 					);
@@ -57,7 +59,7 @@ export class QuickfillServer {
 						server: this.server as unknown as Server,
 					});
 
-					this.wss.on("connection", (ws: WebSocket, req: any) => {
+					this.wss.on("connection", (ws: WebSocket, req: IncomingMessage) => {
 						const url = req.url || "";
 						if (url.includes("/shell")) {
 							this.shellClients.add(ws);
