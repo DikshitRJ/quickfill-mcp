@@ -20,6 +20,7 @@ Quickfill is a lightweight **Generative UI Toolkit** delivered via the Model Con
 ## 📖 Table of Contents
 - [🌟 Overview](#-overview)
 - [✨ The "Generative UI" Workflow](#-the-generative-ui-workflow)
+- [📦 Installation](#-installation)
 - [🎨 Core Features](#-core-features)
 - [🛠 Tool Reference](#-tool-reference)
 - [📈 Star History](#-star-history)
@@ -42,6 +43,11 @@ The power of Quickfill lies in its ability to bridge local data with interactive
 2.  🎨 **Generate**: The AI drafts a custom-tailored UI using Tailwind & Alpine.js.
 3.  🔗 **Bridge**: Use `mount_file` to expose your local data to the secure web environment.
 4.  🚀 **Launch**: Use `render_interactive_ui` to pop open a live, functional dashboard in your browser.
+
+---
+
+## 📦 Installation
+Check out the [USAGE.md](USAGE.md) for detailed installation and setup instructions.
 
 ---
 
